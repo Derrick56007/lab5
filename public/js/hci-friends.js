@@ -3,7 +3,14 @@
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
-})
+
+	$('.name').click(function(e) {
+		e.preventDefault();
+
+
+		$(this).text(anagrammedName($(this).text()));
+	});
+});
 
 /*
  * Function that is called when the document is ready.
